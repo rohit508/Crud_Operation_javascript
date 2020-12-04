@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CRU-OPERATION</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="icon" href="image/crud.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <h1>CRUD OPERATION</h1>
+    </nav>
+
+    <!-- Form -->
+
+
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+                    <label class="validation-error hide"
+                    id="fullNameValidationError">This field is required.</label>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>First Name</label>
+                            <input type="text" class="form-control" name="fullName" id="fullName" maxlength="10" style="width: 100%;" >
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Last Name</label>
+                            <input type="text" class="form-control" name="lastname" id="lastname" maxlength="10" style="width: 100%;" >
+                        </div>
+                    </div>
+
+
+                    <div class="form-row">
+                        <div class="form-group col-md-10">
+                            <label for="inputEmail4">Email</label>
+                            <input class="form-control" type="email" name="salary" id="salary" style="width: 100%;" maxlength="25" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">City</label>
+                            <input class="form-control" type="text" name="salary" id="city" style="width: 100%; " maxlength="20"  required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Phone Number</label>
+                            <input type="text" class="form-control" name="Phone" id="Phone" style="width: 100%;" maxlength="15"  required>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="form-action-buttons">
+                        <button type="submit" class="btn btn-success" value="Submit">CREATE</button>
+                        <button type="button" class="btn btn-danger" onclick="deleteall()">DELETE ALL</button>
+                    </div>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    <table class="table table-bordered" class="list" id="employeeList">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">First</th>
+                <th scope="col">last</th>
+                <th scope="col">Email</th>
+                <th scope="col">Location</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Action</th>
+                
+            </tr>
+        </thead>
+
+
+
+        <tbody id="listdata">
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

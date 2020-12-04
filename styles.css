@@ -1,0 +1,23 @@
+
+td, th {
+   
+    text-align: left;
+    padding: 10px;
+}
+tr:nth-child(even),table.list thead>tr {
+    background-color: #f3eded;
+   
+}
+
+
+
+
+label.validation-error{
+    color:   red;
+    margin-left: 100px;
+    font-size: 20px;
+}
+
+.hide{
+    display:none;
+}
